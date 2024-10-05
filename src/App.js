@@ -2,19 +2,19 @@ export default function Board() {
   return(
     <>
       <div className="board-row">
-        <Square value= "" />
-        <Square value= "" />
-        <Square value= "" />
+        <Square turn= "1" />
+        <Square turn= "2" />
+        <Square turn= "3" />
       </div>
       <div className="board-row">
-        <Square value= "" />
-        <Square value= "" />
-        <Square value= "" />
+        <Square turn= "4" />
+        <Square turn= "5" />
+        <Square turn= "6" />
       </div>
       <div className="board-row">
-        <Square value= "" />
-        <Square value= "" />
-        <Square value= "" />
+        <Square turn= "7" />
+        <Square turn= "8" />
+        <Square turn= "9" />
       </div>
     </>
   );
@@ -27,7 +27,7 @@ function Square({turn}){
   return (
     <button 
       className="square"
-      onclick={handleClick}
+      onClick={handleClick}
     >
       {turn}
     </button>
