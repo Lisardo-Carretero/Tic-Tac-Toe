@@ -2,24 +2,34 @@ export default function Board() {
   return(
     <>
       <div className="board-row">
-        <DrawTurn value= "" />
-        <DrawTurn value= "" />
-        <DrawTurn value= "" />
+        <Square value= "" />
+        <Square value= "" />
+        <Square value= "" />
       </div>
       <div className="board-row">
-        <DrawTurn value= "" />
-        <DrawTurn value= "" />
-        <DrawTurn value= "" />
+        <Square value= "" />
+        <Square value= "" />
+        <Square value= "" />
       </div>
       <div className="board-row">
-        <DrawTurn value= "" />
-        <DrawTurn value= "" />
-        <DrawTurn value= "" />
+        <Square value= "" />
+        <Square value= "" />
+        <Square value= "" />
       </div>
     </>
   );
 }
 
-function DrawTurn({turn}){
-  return <button className="square">{turn}</button>;
+function Square({turn}){
+  function handleClick(){
+    console.log('clicked!');
+  }
+  return (
+    <button 
+      className="square"
+      onclick={handleClick}
+    >
+      {turn}
+    </button>
+    );
 }
