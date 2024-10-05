@@ -20,8 +20,17 @@ export default function Board() {
     console.log("Esto vale ahora" + squares);
   }
 
+  const winner =calculateWinner(squares);
+  let status;
+  if(winner){
+    status = "Congrats player: " + winner +" your are the winner.";
+  }else{
+    status = "Turn of player: " + (xIsNext ? "X" : "O");
+  }
+
   return(
     <>
+      <div  className="status">{status}</div>
       <div className="board-row" >
         <Square turn={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square turn={squares[1]} onSquareClick={() => handleClick(1)} />
