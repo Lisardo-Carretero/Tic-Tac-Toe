@@ -1,3 +1,6 @@
+import{useState} from 'react';
+
+
 export default function Board() {
   return(
     <>
@@ -20,9 +23,11 @@ export default function Board() {
   );
 }
 
-function Square({turn}){
+function Square( ){
+  const [turn, setTurn] = useState("")
   function handleClick(){
     console.log('clicked!');
+    setTurn('X');
   }
   return (
     <button 
