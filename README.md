@@ -1,2 +1,2 @@
 # Tic-Tac-Toe
- Tutorial de react
+React tutorial
